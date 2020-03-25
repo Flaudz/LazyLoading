@@ -1,5 +1,12 @@
+const images = document.querySelectorAll("img");
+images.forEach((img, index) => {
+	img.setAttribute(
+		"data-src",
+		`https://picsum.photos/200/300?random=${index.toString()}`
+	);
+});
+
 if ("loading" in HTMLImageElement.prototype) {
-	const images = document.querySelectorAll("img");
 	images.forEach((img) => {
 		img.setAttribute("height", "300px");
 		img.setAttribute("width", "200px");
